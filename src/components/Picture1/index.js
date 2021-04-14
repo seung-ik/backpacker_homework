@@ -6,6 +6,7 @@ const Picture1 = () => {
   return (
     <div className="picture-container">
       <img src={logo} alt="로고이미지" />
+
       <div className="picture-middle">
         <div className="picture-label">Card Label</div>
         <div className="picture-title">Card Title</div>

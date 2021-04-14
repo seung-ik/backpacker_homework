@@ -6,7 +6,7 @@ const Case2 = () => {
   return (
     <div>
       <CardHeader />
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         <Picture2 />
         <Picture2 />
         <Picture2 />

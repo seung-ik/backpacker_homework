@@ -9,8 +9,8 @@ const Picture4 = () => {
         <img src={logo} alt="로고이미지" />
       </div>
       <div className="picture-row-right">
-        <div className="picture-label">Lorem ipsum dolor sit amet...</div>
-        <div className="picture-title">Lorem ipsum dolor sit amet consectetur adipisicing elit...</div>
+        <div className="picture-row-label">Lorem ipsum dolor sit amet...</div>
+        <div className="picture-row-title">Lorem ipsum dolor sit amet consectetur adipisicing elit...</div>
         <div className="point-boxes row">
           <div className="point-box check"></div>
           <div className="point-box check"></div>
