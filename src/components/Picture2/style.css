@@ -1,0 +1,7 @@
+.picture2-bottom {
+  flex: 1;
+  border: 2px solid rgb(115, 115, 116);
+  display: flex;
+  align-items: center;
+  padding: 1em 0.3em;
+}

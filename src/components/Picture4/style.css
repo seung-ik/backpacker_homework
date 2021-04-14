@@ -1,0 +1,30 @@
+.picture-container-row {
+  display: flex;
+  width: 40%;
+  margin: 1em 1em;
+  border: 1px solid black;
+}
+
+.picture-row-left {
+  height: 20vh;
+  flex: 1;
+}
+.picture-row-left > img {
+  width: auto;
+  height: 20vh;
+}
+.picture-row-right {
+  padding-left: 1em;
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20vh;
+}
+/* .picture-title {
+  text-overflow: ellipsis;
+} */
+.row {
+  margin: 0;
+  width: 80%;
+}
