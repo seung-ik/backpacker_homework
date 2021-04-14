@@ -8,7 +8,7 @@ const Header = () => {
         <button>카드 UI 확인하기</button>
       </Link>
       <Link to="/text">
-        <button>입력폼 확인하기</button>
+        <button>입력폼 UI 확인하기</button>
       </Link>
     </div>
   );
