@@ -11,7 +11,7 @@ const Picture4 = () => {
       <div className="picture-row-right">
         <div className="picture-row-label">Lorem ipsum dolor sit amet...</div>
         <div className="picture-row-title">Lorem ipsum dolor sit amet consectetur adipisicing elit...</div>
-        <div className="point-boxes row">
+        <div className="point-boxes-row">
           <div className="point-box check"></div>
           <div className="point-box check"></div>
           <div className="point-box"></div>
