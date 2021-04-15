@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef, useEffect } from "react";
 import SetLengthForm from "components/SetLengthForm";
 import "./style.css";
 
-const DefaultInput = () => {
+const Default = () => {
   const typingInputRef = useRef();
   const [maxLength, setMaxLength] = useState(300);
   const [maxLengthInputValue, setMaxLengthInputValue] = useState("");
@@ -56,7 +56,7 @@ const DefaultInput = () => {
   }, [typingInputValue, initialData]);
 
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column", margin: "30px" }}>
       <SetLengthForm
         maxLengthInputValue={maxLengthInputValue}
         onChangeMaxLengthInputValue={onChangeMaxLengthInputValue}
@@ -81,8 +81,8 @@ const DefaultInput = () => {
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
-export default DefaultInput;
+export default Default;
