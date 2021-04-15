@@ -6,7 +6,9 @@ const Text = () => {
   return (
     <div>
       <Header />
-      <DefaultInput />
+      <div style={{ display: "flex", flexDirection: "column", margin: "30px" }}>
+        <DefaultInput />
+      </div>
     </div>
   );
 };

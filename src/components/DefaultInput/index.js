@@ -1,9 +1,9 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import SetLengthForm from "components/SetLengthForm";
+import "./style.css";
 
 const DefaultInput = () => {
   const typingInputRef = useRef();
-
   const [maxLength, setMaxLength] = useState(300);
   const [maxLengthInputValue, setMaxLengthInputValue] = useState("");
   const [typingInputValue, setTypingInputValue] = useState("");
@@ -21,15 +21,23 @@ const DefaultInput = () => {
   const onSubmitMaxLength = useCallback(
     (e) => {
       e.preventDefault();
-      if (isNaN(Number(maxLengthInputValue))) {
+
+      let maxlen = Number(maxLengthInputValue);
+
+      if (isNaN(maxlen)) {
         alert("숫자를 넣어주세요");
         setMaxLengthInputValue("");
         return;
       }
-      setMaxLength(Number(maxLengthInputValue));
+      if (typingInputValue.length > maxlen) {
+        alert("이미 제한글자를 초과하였습니다.");
+        setMaxLengthInputValue("");
+        return;
+      }
+      setMaxLength(maxlen);
       setMaxLengthInputValue("");
     },
-    [maxLengthInputValue]
+    [maxLengthInputValue, typingInputValue]
   );
 
   const focusTyping = useCallback(() => {
@@ -54,20 +62,24 @@ const DefaultInput = () => {
         onChangeMaxLengthInputValue={onChangeMaxLengthInputValue}
         onSubmitMaxLength={onSubmitMaxLength}
       />
-      <div style={{ display: "flex" }}>
-        <div style={{ border: "1px solid black", position: "relative", width: "800px" }} onClick={focusTyping}>
-          <input
+      <div className="input-container">
+        <div className={isTyping ? "input-outterbox focus" : "input-outterbox"} onClick={focusTyping}>
+          <textarea
+            className="input-innerbox"
             type="text"
             ref={typingInputRef}
             placeholder={initialData}
             maxLength={maxLength}
             value={typingInputValue}
             onChange={onChangeTypingInputValue}
-            style={{ width: "90%", height: "70px", border: "none", marginBottom: "60px", outLine: "none" }}
           />
-          <div style={{ position: "absolute", bottom: 0, right: 0 }}>{maxLength - typingInputValue.length}</div>
+          <div className="input-maxlength">{maxLength - typingInputValue.length}</div>
         </div>
-        {isTyping && <button onClick={onClickSave}>SAVE</button>}
+        {isTyping && (
+          <button className="save-button" onClick={onClickSave}>
+            SAVE
+          </button>
+        )}
       </div>
     </>
   );
