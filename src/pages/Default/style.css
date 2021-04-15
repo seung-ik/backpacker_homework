@@ -17,6 +17,8 @@
   position: absolute;
   bottom: 0;
   right: 10px;
+  font-size: 13px;
+  color: rgb(148, 147, 147);
 }
 .save-button {
   padding: 20px;

@@ -1,19 +1,23 @@
 .disable-box {
-  margin-top: 30px;
-  position: relative;
   width: 800px;
   height: 70px;
   border: 1px solid black;
   padding: 7px;
   font-size: 13px;
   color: rgb(232, 97, 97);
-  background-color: rgb(231, 229, 229);
   cursor: not-allowed;
 }
-.disable-box > span {
+.disable-outterbox {
+  width: 800px;
+  height: 70px;
+  position: relative;
+}
+.disable-maxlength {
   position: absolute;
   bottom: 0;
   right: 10px;
+  font-size: 13px;
+  color: rgb(148, 147, 147);
 }
 .userbutton {
   width: 100px;
