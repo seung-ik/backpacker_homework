@@ -1,6 +1,10 @@
 .picture3-bottom {
   flex: 1;
   border: none;
-  border-top: 1.5px solid rgb(115, 115, 116);
   background-color: white;
+}
+.picture3-middle {
+  border: 1.5px solid rgb(115, 115, 116);
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
 }

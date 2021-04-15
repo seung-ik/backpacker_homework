@@ -1,15 +1,16 @@
 import React from "react";
 import Picture1 from "components/Picture1";
+import { sample } from "sampleDatas/data/sampledata.js";
 
 const Case1 = () => {
+  const datas = sample.cardData;
+
   return (
     <div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <Picture1 />
-        <Picture1 />
-        <Picture1 />
-        <Picture1 />
-        <Picture1 />
+        {datas.map((data) => {
+          return <Picture1 data={data} key={data.id} />;
+        })}
       </div>
     </div>
   );

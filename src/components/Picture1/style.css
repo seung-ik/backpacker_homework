@@ -11,6 +11,8 @@
   width: 100%;
   height: auto;
   border-bottom: none;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
 }
 .picture-middle {
   display: flex;
@@ -48,7 +50,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1.5px solid rgb(115, 115, 116);
+  border: 1.5px solid rgb(126, 126, 128);
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
 }
 
 .point-boxes {
@@ -67,8 +71,11 @@
 .check {
   background-color: yellowgreen;
 }
-.picture1-bottom > span {
+.picture-contents {
   margin-left: 0.5em;
   font-size: 0.8rem;
   color: rgb(103, 104, 104);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

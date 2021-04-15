@@ -5,7 +5,6 @@
   margin: 1em 1em;
   min-height: 130px;
 }
-
 .picture-row-left {
   height: 28vh;
   width: auto;
@@ -15,6 +14,8 @@
   width: auto;
   height: 28vh;
   min-height: 130px;
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
 }
 .picture-row-right {
   padding-left: 1em;
@@ -25,6 +26,8 @@
   justify-content: space-between;
   border: 1.5px solid rgb(115, 115, 116);
   border-left: none;
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
   min-height: 130px;
   height: 28vh;
   padding-top: 1em;
@@ -39,6 +42,10 @@
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  height: 48%;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .point-boxes-row {
   display: flex;
@@ -51,4 +58,10 @@
   color: rgb(163, 165, 165);
   position: relative;
   top: 2px;
+}
+
+@media (max-height: 630px), (max-width: 1050px) {
+  * {
+    font-size: 12px;
+  }
 }

@@ -6,12 +6,10 @@ const Disable = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", margin: "30px" }}>
-      <div className="disable-outterbox">
-        <textarea disabled={!isLogin} className="disable-box">
-          로그인이 필요한 서비스입니다.
-        </textarea>
+      <form className="disable-outterbox">
+        <input disabled={!isLogin} className="disable-box" placeholder="로그인이 필요한 서비스입니다." />
         <div className="disable-maxlength">500</div>
-      </div>
+      </form>
     </div>
   );
 };

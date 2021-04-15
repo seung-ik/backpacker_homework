@@ -3,9 +3,12 @@
   height: 70px;
   border: 1px solid black;
   padding: 7px;
+  cursor: not-allowed;
+  color: rgb(129, 154, 218);
+}
+.disable-box::placeholder {
   font-size: 13px;
   color: rgb(232, 97, 97);
-  cursor: not-allowed;
 }
 .disable-outterbox {
   width: 800px;
@@ -18,8 +21,4 @@
   right: 10px;
   font-size: 13px;
   color: rgb(148, 147, 147);
-}
-.userbutton {
-  width: 100px;
-  height: 20px;
 }

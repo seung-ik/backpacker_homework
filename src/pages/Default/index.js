@@ -64,7 +64,7 @@ const Default = () => {
       />
       <div className="input-container">
         <div className={isTyping ? "input-outterbox focus" : "input-outterbox"} onClick={focusTyping}>
-          <textarea
+          <input
             className="input-innerbox"
             type="text"
             ref={typingInputRef}
